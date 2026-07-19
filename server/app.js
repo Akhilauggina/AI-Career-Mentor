@@ -4,6 +4,7 @@ const cors = require("cors");
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 const resumeRoutes = require("./routes/resumeRoutes");
+const jobRoutes = require("./routes/jobRoutes");
 
 const app = express();
 
@@ -17,6 +18,8 @@ app.use("/api/resume", resumeRoutes);
 app.use("/api/users", userRoutes);
 
 app.use("/api/auth", authRoutes);
+
+app.use("/api/jobs", jobRoutes);
 
 app.get("/", (req, res) => {
     res.send("Backend Running 🚀");
