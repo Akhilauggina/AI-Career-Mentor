@@ -21,6 +21,11 @@ const userSchema=new mongoose.Schema({
         type:[String],
         default:[]
     },
+    phone: {
+        type: String,
+        trim: true,
+        default: ""
+    },
     education:[{
         degree:String,
         college:String,branch:String,

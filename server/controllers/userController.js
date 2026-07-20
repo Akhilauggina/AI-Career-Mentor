@@ -35,9 +35,10 @@ const getProfile = async (req, res) => {
 
 const updateProfile = async (req, res) => {
     try{
-        const {name,skills,education,carrerGoal}=req.body;
-        const updatedUser=await User.findByIdAndUpdate(req.user.id,{
+        const {name, phone, skills, education, carrerGoal} = req.body;
+        const updatedUser = await User.findByIdAndUpdate(req.user.id, {
             name,
+            phone,
             skills,
             education,
             carrerGoal

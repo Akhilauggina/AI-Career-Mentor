@@ -1,0 +1,12 @@
+const fs = require('fs');
+const path = require('path');
+const file = path.join(__dirname, 'controllers', 'resumeController.js');
+console.log('path:', file);
+const content = fs.readFileSync(file, 'utf8');
+console.log('content start');
+console.log(content);
+console.log('content end');
+const ctrl = require('./controllers/resumeController');
+console.log('exports:', ctrl);
+console.log('keys:', Object.keys(ctrl));
+console.log('types:', typeof ctrl.uploadResume, typeof ctrl.getResumes, typeof ctrl.deleteResume);
