@@ -1,0 +1,333 @@
+I already have a fully working MERN backend for an AI Career Mentor project.
+
+DO NOT generate backend code.
+
+DO NOT change API endpoints.
+
+Only build the React frontend.
+
+Tech Stack
+
+- React 19
+- Vite
+- React Router DOM
+- Axios
+- Tailwind CSS
+- Recharts
+- React Icons
+
+Use a professional dashboard UI similar to Notion, Vercel or Clerk.
+
+Theme
+
+Modern
+
+Minimal
+
+Rounded cards
+
+Shadow
+
+Responsive
+
+Beautiful color palette
+
+Animations using Framer Motion wherever appropriate.
+
+Folder Structure
+
+src/
+
+components/
+
+pages/
+
+services/
+
+context/
+
+layouts/
+
+hooks/
+
+assets/
+
+utils/
+
+Existing Components
+
+Loading.jsx
+
+EmptyState.jsx
+
+Navbar.jsx
+
+Sidebar.jsx
+
+Layout.jsx
+
+ProtectedRoute.jsx
+
+Existing Services
+
+authService.js
+
+resumeService.js
+
+jobService.js
+
+profileService.js
+
+Do NOT modify these services.
+
+If any additional service is needed create only
+
+applicationService.js
+
+dashboardService.js
+
+aiService.js
+
+Backend Already Exists
+
+Authentication
+
+Profile APIs
+
+Resume CRUD
+
+Job CRUD
+
+Application CRUD
+
+Dashboard APIs
+
+Cloudinary Upload
+
+Resume Parsing
+
+JWT Authentication
+
+Connect frontend to existing backend.
+
+Pages Already Existing
+
+Login
+
+Register
+
+Dashboard
+
+Profile
+
+Improve these pages.
+
+Pages To Build Completely
+
+Resume.jsx
+
+Jobs.jsx
+
+Applications.jsx
+
+AIDashboard.jsx
+
+Dashboard Improvements
+
+Dashboard Cards
+
+Applications Chart
+
+Job Status Pie Chart
+
+Recent Applications Table
+
+Quick Actions
+
+Responsive Dashboard
+
+Profile
+
+Beautiful Profile Card
+
+Edit Profile
+
+Skills Tags
+
+Profile Avatar Placeholder
+
+Resume Page
+
+Upload Resume
+
+Resume Cards
+
+ATS Score Badge
+
+Active Resume Badge
+
+Delete Resume
+
+View Resume
+
+Upload Progress
+
+Drag and Drop Upload
+
+Jobs Page
+
+Create Job
+
+Update Job
+
+Delete Job
+
+Search Jobs
+
+Filter by Status
+
+Beautiful Job Cards
+
+Skills Badges
+
+Job Type Badge
+
+Experience Badge
+
+Deadline Badge
+
+Application Link Button
+
+Applications Page
+
+Application Cards
+
+Status Dropdown
+
+Delete
+
+Search
+
+View Related Job
+
+View Resume Used
+
+Interview Status Timeline
+
+Dashboard Statistics
+
+AI Dashboard
+
+Modern ChatGPT-like Interface
+
+Resume Analysis Card
+
+ATS Score
+
+Career Mentor Chat UI
+
+Interview Questions UI
+
+Learning Roadmap
+
+Skill Gap Analysis
+
+Charts
+
+Use Recharts
+
+Applications per Month
+
+Job Status Pie Chart
+
+Resume Score Chart
+
+Reusable Components
+
+JobCard
+
+ResumeCard
+
+ApplicationCard
+
+DashboardCard
+
+ChartCard
+
+ConfirmModal
+
+SearchBar
+
+StatusBadge
+
+TopBar
+
+Notifications Dropdown
+
+User Menu
+
+UI Requirements
+
+Fully Responsive
+
+Professional Animations
+
+Tailwind CSS
+
+Dark Mode Ready
+
+Loading Skeletons
+
+Empty States
+
+Success Toasts
+
+Error Toasts
+
+Confirmation Dialogs
+
+Modern Forms
+
+Icons using React Icons
+
+Validation
+
+Good UX
+
+No inline CSS.
+
+Use Tailwind only.
+
+Code Quality
+
+Reusable Components
+
+Clean Architecture
+
+Hooks
+
+Proper Error Handling
+
+Async Await
+
+React Best Practices
+
+No syntax errors.
+
+No undefined variables.
+
+No duplicate code.
+
+Everything must compile successfully.
+
+Generate every missing file.
+
+Generate package.json dependencies.
+
+Generate folder structure.
+
+Generate complete code.
+
+Do not explain anything.
+
+Output production-ready React code.
