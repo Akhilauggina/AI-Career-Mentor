@@ -23,8 +23,10 @@ api.interceptors.response.use(
     const status = error.response?.status;
     const serverMsg = error.response?.data?.message;
 
-    // Session expired — clear auth and redirect to login
-    if (status === 401) {
+    // Session expired — clear auth and redirect to login.
+    // Skip when using the preview bypass token so the UI stays visible.
+    const isPreview = localStorage.getItem("token") === "preview-token";
+    if (status === 401 && !isPreview) {
       localStorage.removeItem("token");
       localStorage.removeItem("user");
       if (
