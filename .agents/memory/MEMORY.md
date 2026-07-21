@@ -1,0 +1,3 @@
+- [Backend architecture](backend-arch.md) — Express on 3001, Vite proxy /api→3001, frontend on 5000; no exit on MongoDB failure
+- [Missing resume controller](resume-controller.md) — getResumes and deleteResume were absent; added in resumeController.js
+- [AI routes](ai-routes.md) — all 5 AI endpoints built in server; require OPENAI_API_KEY and MONGO_URI secrets to function

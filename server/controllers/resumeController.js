@@ -79,6 +79,34 @@ const uploadResume = async (req, res) => {
     }
 };
 
+const getResumes = async (req, res) => {
+    try {
+        const resumes = await Resume.find({ user: req.user.id }).sort({ createdAt: -1 });
+        return res.status(200).json({ success: true, resumes });
+    } catch (error) {
+        console.error("Get Resumes Error:", error);
+        return res.status(500).json({ success: false, message: "Internal Server Error" });
+    }
+};
+
+const deleteResume = async (req, res) => {
+    try {
+        const resume = await Resume.findOne({ _id: req.params.id, user: req.user.id });
+        if (!resume) {
+            return res.status(404).json({ success: false, message: "Resume not found" });
+        }
+        // Remove from Cloudinary
+        await cloudinary.uploader.destroy(resume.cloudinaryId, { resource_type: "raw" });
+        await Resume.findByIdAndDelete(req.params.id);
+        return res.status(200).json({ success: true, message: "Resume deleted successfully" });
+    } catch (error) {
+        console.error("Delete Resume Error:", error);
+        return res.status(500).json({ success: false, message: "Internal Server Error" });
+    }
+};
+
 module.exports = {
-    uploadResume
+    uploadResume,
+    getResumes,
+    deleteResume,
 };

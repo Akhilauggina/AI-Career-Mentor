@@ -1,35 +1,17 @@
-const StatusBadge = ({ status }) => {
+import { statusColors } from "../utils/helpers";
 
-    const colors = {
+const StatusBadge = ({ status, size = "sm" }) => {
+  const style = statusColors[status] || { bg: "bg-gray-100", text: "text-gray-700", dot: "bg-gray-400" };
+  const textSize = size === "sm" ? "text-xs" : "text-sm";
 
-        Applied: "bg-blue-100 text-blue-700",
-
-        "Interview Scheduled":
-            "bg-yellow-100 text-yellow-700",
-
-        Rejected:
-            "bg-red-100 text-red-700",
-
-        Offer:
-            "bg-green-100 text-green-700",
-
-        Accepted:
-            "bg-purple-100 text-purple-700"
-
-    };
-
-    return (
-
-        <span
-            className={`px-3 py-1 rounded-full text-sm ${colors[status]}`}
-        >
-
-            {status}
-
-        </span>
-
-    );
-
+  return (
+    <span
+      className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-medium ${style.bg} ${style.text} ${textSize}`}
+    >
+      <span className={`w-1.5 h-1.5 rounded-full ${style.dot}`} />
+      {status}
+    </span>
+  );
 };
 
 export default StatusBadge;
